@@ -1,0 +1,14 @@
+services:
+  music-backend:
+    container_name: screen_match_api
+    image: postgres
+    ports:
+      - '5432:5432'
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: lemon1234
+      POSTGRES_USER: imnotgroot
+      POSTGRES_DB: screenmatch_api
+    volumes: [ ./pg-data:/var/lib/postgresql/data ]
+volumes:
+  pg-data:
